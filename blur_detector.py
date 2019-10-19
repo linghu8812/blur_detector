@@ -1,10 +1,3 @@
-"""A demonstration code of image blurness detection. The algorithm is from the
-technical paper:
-Marichal, Xavier & Ma, Wei-Ying & Zhang, HongJiang. (1999). Blur determination
-in the compressed domain using DCT information. IEEE International Conference on
-Image Processing. 2. 386 - 390 vol.2. 10.1109/ICIP.1999.822923.
-"""
-import sys
 import cv2
 import numpy as np
 
