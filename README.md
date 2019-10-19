@@ -7,9 +7,9 @@ Python 3.5 or above<br>
 OpenCV 3.4.1<br>
 
 ## How to use
-``
+````
 git clone git@github.com:linghu8812/blur_detector.git
-``
+````
 ### Windows
 Open blur_detector.sln
 
@@ -20,9 +20,9 @@ mkdir build && cd build && cmake .. && make
 ````
 
 ### Python
-``
+````
 python3 blur_detector.py
-``
+````
 
 
 ## Reference 
