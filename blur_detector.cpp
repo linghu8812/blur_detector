@@ -41,15 +41,7 @@ float BlurDetector::get_blurness(cv::Mat image, int block_size)
             cv::dct(image_patch, patch_spectrum);
             cv::Mat patch_none_zero;
             cv::threshold(cv::abs(patch_spectrum), patch_none_zero, dct_threshold, 1, cv::THRESH_BINARY);
-            for (int i = 0; i < block_size; i++)
-            {
-                float *h = hist.ptr<float>(i);
-                float *p = patch_none_zero.ptr<float>(i);
-                for (int j = 0; j < block_size; j++)
-                {
-                    h[j] += p[j];
-                }
-            }
+			hist += patch_none_zero;
         }
     float blr_thresh = max_hist * hist.at<float>(0, 0);
     cv::Mat blur;
