@@ -2,7 +2,12 @@
 
 int main()
 {
-    cv::Mat src_img = cv::imread("cat.jpg");
+    cv::Mat src_img = cv::imread("test.jpg");
+	if (!src_img.data)
+	{
+		printf("Image file is not exist!\n");
+		return -1;
+	}
     cv::Mat gray_img;
     cv::cvtColor(src_img, gray_img, CV_BGR2GRAY);
     BlurDetector bd;
